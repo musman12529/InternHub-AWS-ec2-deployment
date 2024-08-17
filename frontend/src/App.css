@@ -1608,9 +1608,147 @@ nav .hamburger {
   height:17.94rem
 }
 
+.review_post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 50px 20px;
+  background: #E4F6F8;
+  min-height: 870px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.review_post .container {
+  margin: 0 auto; /* Center horizontally */
+  background: #D0E8EE;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 600px;
+}
+
+.review_post .container h3 {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.review_post .container:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.review_post .container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
 
+.review_post .container form .wrapper {
+  display: flex;
+  gap: 30px; /* Increased spacing between fields */
+}
 
+.review_post .container form .wrapper input,
+.review_post .container form .wrapper select {
+  flex: 1;
+  font-size: 18px; /* Adjusted font size */
+  padding: 12px; /* Increased padding */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 10px; /* Rounder corners for inputs */
+  background: #f9f9f9; /* Light background */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
 
+.review_post .container form input,
+.review_post .container form textarea {
+  font-size: 18px;
+  padding: 12px; /* Increased padding */
+  width: 100%;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounder corners for inputs */
+}
 
+.review_post .container form textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
 
+.review_post .container form .salary_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap between salary inputs */
+}
+
+.review_post .container form .salary_wrapper select {
+  width: fit-content;
+  font-size: 18px;
+  padding: 12px; /* Increased padding */
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounder corners for selects */
+}
+
+.review_post .container form .salary_wrapper .ranged_salary {
+  display: flex;
+  gap: 30px; /* Increased spacing between salary fields */
+}
+
+.review_post .container form button {
+  width: 100%;
+  background: #2d5649;
+  font-size: 16px; /* Slightly smaller font size */
+  padding: 12px 25px; /* Adjusted padding for a smaller button */
+  border: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px; /* Adjusted letter spacing */
+  border-radius: 10px; /* Rounder corners for button */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.review_post .container form button:hover {
+  background: #1b3a27; /* Darker background on hover */
+}
+
+.reviews_section {
+  margin-top: 70px; /* Ensure there is sufficient space between the two sections */
+}
+
+.reviews_section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reviews_section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reviews_section .review_card {
+  background: #D0E8EE;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Set a maximum width for the card */
+  word-wrap: break-word; /* Ensure long words break and wrap to the next line */
+  overflow-wrap: break-word; /* Alternative to word-wrap, ensuring text wraps within the card */
+}
+
+.reviews_section .review_card h4 {
+  margin: 0 0 10px 0;
+}
+
+.reviews_section .review_card p {
+  margin: 0;
+}
