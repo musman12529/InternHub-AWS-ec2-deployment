@@ -67,7 +67,7 @@ const HeroSection = () => {
       <div className="heroSection">
         <div className="container">
           <div className="title">
-            <h1>Welcome To InternPro</h1>
+            <h1>Welcome To InternHub</h1>
             
             <p>
             Discover exciting opportunities that match your skills and aspirations. Whether you're looking to gain hands-on experience or explore new fields, our platform connects you with internships that help you grow and succeed.

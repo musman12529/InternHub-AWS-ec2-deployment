@@ -197,6 +197,9 @@ p {
   background: #2d5649;
   font-size: 1.2rem;
   border-radius: 7px;
+  cursor: pointer; /* Add this line to change the cursor on hover */
+
+  
 }
 .authPage .container form a {
   padding: 12px;
