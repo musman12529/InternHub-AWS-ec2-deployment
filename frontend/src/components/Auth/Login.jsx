@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLock2Fill } from "react-icons/ri";
 import { Link, Navigate } from "react-router-dom";
@@ -8,12 +8,12 @@ import toast from "react-hot-toast";
 import { Context } from "../../main";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [role, setRole] = useState("");
+  const [email, setEmail] = useState("abcd@gmail.com");
+  const [password, setPassword] = useState("12345678");
+  const [role, setRole] = useState("Employer");
 
   const { isAuthorized, setIsAuthorized } = useContext(Context);
-
+  
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -36,20 +36,23 @@ const Login = () => {
       toast.error(error.response.data.message);
     }
   };
+  
 
-  if(isAuthorized){
-    return <Navigate to={'/'}/>
+  if (isAuthorized) {
+    return <Navigate to={'/'} />;
   }
 
   return (
+    
     <>
+      
+    
       <section className="authPage">
-
+      
         <div className="container">
-        
           <div className="header">
             <img className="frontLogo" src="/scholar.png" alt="logo" />
-            <h3>Login to Your Account</h3>
+            <h3>Account Login</h3>
           </div>
           <form>
             <div className="inputTag">

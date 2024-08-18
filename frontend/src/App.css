@@ -119,6 +119,7 @@ p {
 }
 
 .authPage {
+  
  
   display: flex;
   min-width: 1500px;
@@ -1905,4 +1906,15 @@ h1 {
 .Botimage img {
   max-width: 150px; /* Adjust to desired size */
   height: auto; /* Maintain aspect ratio */
+}
+
+
+.infoMessage {
+  background-color: #f0f8ff;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+
+  text-align: center; /* Center text inside the box */
 }

@@ -18,6 +18,7 @@ import NotFound from "./components/NotFound/NotFound";
 import MyJobs from "./components/Job/MyJobs";
 import UserReview from "./components/Review/Reviews";
 import ChatBot from "./components/Chat/Chat";
+import toast from "react-hot-toast";
 
 
 const App = () => {
@@ -31,6 +32,9 @@ const App = () => {
             withCredentials: true,
           }
         );
+        
+          
+        
         setUser(response.data.user);
         setIsAuthorized(true);
       } catch (error) {
