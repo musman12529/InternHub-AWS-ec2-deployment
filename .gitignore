@@ -12,6 +12,7 @@ lerna-debug.log*
 /backend/config
 #remove all .env files
 /backend/.env
+*.env
 dist
 dist-ssr
 *.local
