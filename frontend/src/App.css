@@ -244,6 +244,7 @@ p {
 }
 
 .footerShow {
+  
   background: #18191c;
   display: flex;
   justify-content: space-between;
@@ -315,7 +316,7 @@ p {
 .heroSection .container .title h1 {
   width: 355px; /* Adjust to final width after animation */
   animation: reveal 3s forwards;
-
+  margin-left: -18px;
   max-width: 600px;
 }
 
@@ -1751,4 +1752,157 @@ nav .hamburger {
 
 .reviews_section .review_card p {
   margin: 0;
+}
+
+
+
+
+/* Container styles */
+.main-chat-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Chat container styles */
+.chat-container {
+  background-color: #D0E8EE;
+  min-height: 350px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  position: relative; /* Ensure position relative for absolute positioning inside */
+}
+
+/* Chat history message styles */
+.chat-history-message {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-message {
+  background-color: #f1f5f9;
+  color: #1f2937;
+}
+
+.bot-message {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.user-label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  color: #4b5563;
+}
+
+/* Input area container styles */
+/* Input area container styles */
+.input-area {
+  display: flex; /* Align items horizontally */
+  width: 100%; /* Full width of parent container */
+  margin-top: 1rem; /* Margin on top */
+}
+
+/* Input field styles */
+.input {
+  flex: 1; /* Grow to fill available space */
+  height: 50px;
+  padding: 0.5rem 1rem; /* Adjust padding */
+  border-radius: 0.5rem; /* Rounded corners */
+  border: 1px solid #d1d5db; /* Border color */
+  outline: none; /* Remove default focus outline */
+  transition: box-shadow 0.2s ease-in-out; /* Smooth focus transition */
+  box-sizing: border-box; /* Include padding and border in width */
+  overflow-wrap: break-word;
+}
+
+/* Send button specific styles */
+.send-button {
+  height: 50px; /* Match height of input */
+  background-color: #3b82f6; /* Background color */
+  border: none; /* Remove default border */
+  color: white; /* Text color */
+  padding: 0.5rem 1rem; /* Padding inside button */
+  border-radius: 12px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-left: 0.5rem; /* Space between input and button */
+}
+
+.send-button:disabled {
+  background-color: #a0aec0; /* Disabled state background color */
+}
+
+
+/* Clear button specific styles */
+.clear-button {
+  margin-top: 1rem;
+  background-color: #9ca3af;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+}
+
+.clear-button:hover {
+  background-color: #a3a4a7;
+}
+
+
+/* Loading spinner styles */
+.spinner-border {
+  width: 2rem; /* Width of spinner */
+  height: 2rem; /* Height of spinner */
+  border: 0.25rem solid rgba(0, 0, 0, 0.1); /* Spinner border */
+  border-radius: 50%; /* Circular spinner */
+  border-top-color: #3b82f6; /* Spinner top border color */
+  animation: spin 1s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg); /* Full rotation */
+  }
+}
+
+/* Loading spinner container styles */
+.loading-container {
+  display: flex; /* Align spinner horizontally */
+  align-items: center; /* Center align spinner */
+  justify-content: center; /* Center align container */
+  margin-top: 0.5rem; /* Margin on top */
+}
+
+/* Visually hidden text for screen readers */
+.visually-hidden {
+  position: absolute; /* Position off-screen */
+  width: 1px; /* Width of hidden element */
+  height: 1px; /* Height of hidden element */
+  margin: -1px; /* Margin to hide element */
+  padding: 0; /* No padding */
+  overflow: hidden; /* Hide overflow */
+  clip: rect(0, 0, 0, 0); /* Clip out of view */
+  border: 0; /* Remove border */
+}
+
+
+.Botimage {
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center horizontally */
+  margin-bottom: 1rem; /* Space below the image */
+}
+
+/* Image styling */
+.Botimage img {
+  max-width: 150px; /* Adjust to desired size */
+  height: auto; /* Maintain aspect ratio */
 }

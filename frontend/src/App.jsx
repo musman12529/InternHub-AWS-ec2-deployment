@@ -17,6 +17,8 @@ import PostJob from "./components/Job/PostJob";
 import NotFound from "./components/NotFound/NotFound";
 import MyJobs from "./components/Job/MyJobs";
 import UserReview from "./components/Review/Reviews";
+import ChatBot from "./components/Chat/Chat";
+
 
 const App = () => {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
@@ -53,6 +55,7 @@ const App = () => {
           <Route path="/job/post" element={<PostJob />} />
           <Route path="/job/me" element={<MyJobs />} />
           <Route path="/Reviews" element={<UserReview />} />
+          <Route path="/chat" element={<ChatBot />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

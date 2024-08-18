@@ -51,13 +51,15 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <li>
-            <Link to={"/Reviews"} onClick={() => setShow(false)}>
-              REVIEWS
-            </Link>
-          </li>
+          {user && user.role === "Job Seeker" && (
+            <li>
+              <Link to={"/Reviews"} onClick={() => setShow(false)}>
+                REVIEWS
+              </Link>
+            </li>
+          )}
 
-          {user && user.role === "Employer" ? (
+          {user && user.role === "Employer" && (
             <>
               <li>
                 <Link to={"/job/post"} onClick={() => setShow(false)}>
@@ -70,9 +72,13 @@ const Navbar = () => {
                 </Link>
               </li>
             </>
-          ) : (
-            <></>
           )}
+
+          <li>
+              <Link to={"/chat"} onClick={() => setShow(false)}>
+                CHAT BOT
+              </Link>
+            </li>
 
           <button onClick={handleLogout}>LOGOUT</button>
         </ul>
