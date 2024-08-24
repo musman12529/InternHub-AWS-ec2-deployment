@@ -17,7 +17,7 @@ const UserReview = () => {
     // Fetch posted reviews when the component mounts
     const fetchReviews = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/v1/review/getall", {
+        const response = await axios.get("https://13.59.161.82:4000/api/v1/review/getall", {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const UserReview = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/review/post",
+        "https://13.59.161.82:4000/api/v1/review/post",
         {
           Company: company,
           Rating: rating,
@@ -60,7 +60,7 @@ const UserReview = () => {
       setRating("");
       setReview("");
       // Fetch reviews again to include the newly posted one
-      const updatedResponse = await axios.get("http://localhost:4000/api/v1/review/getall", {
+      const updatedResponse = await axios.get("https://13.59.161.82:4000/api/v1/review/getall", {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

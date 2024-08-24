@@ -16,7 +16,7 @@ const HeroSection = () => {
   // useEffect(() => {
   //   const fetchStatistics = async () => {
   //     try {
-  //       const response = await axios.get("http://localhost:4000/api/v1/statistics", {
+  //       const response = await axios.get("https://13.59.161.82:4000/api/v1/statistics", {
   //         withCredentials: true,
   //       });
   //       console.log('API Response:', response.data);

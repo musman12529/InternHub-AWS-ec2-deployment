@@ -10,21 +10,27 @@ const Navbar = () => {
   const { isAuthorized, setIsAuthorized, user } = useContext(Context);
   const navigateTo = useNavigate();
 
-  const handleLogout = async () => {
-    try {
-      const response = await axios.get(
-        "http://localhost:4000/api/v1/user/logout",
-        {
-          withCredentials: true,
-        }
-      );
-      toast.success(response.data.message);
-      setIsAuthorized(false);
-      navigateTo("/login");
-    } catch (error) {
-      toast.error(error.response.data.message), setIsAuthorized(true);
-    }
+  const handleLogout = () => {
+    // Open the logout URL in a new tab
+    // Example usage in frontend:
+const redirectUrl = "https://intern-hub-frontend.vercel.app/" ;
+window.open(
+  `https://13.59.161.82:4000/api/v1/user/logout?redirect=${encodeURIComponent(redirectUrl)}`,
+  "_blank"
+);
+
+    // Clear local storage and session storage
+    localStorage.removeItem("user");
+    sessionStorage.removeItem("user");
+
+    
+  
+    // Redirect to the login page
+    setIsAuthorized(false);
+    navigateTo("/");
+    
   };
+  
 
   return (
     <nav className={isAuthorized ? "navbarShow" : "navbarHide"}>

@@ -12,7 +12,7 @@ const JobDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/v1/job/${id}`, {
+      .get(`https://13.59.161.82:4000/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {
